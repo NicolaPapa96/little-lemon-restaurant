@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 36px 10px;
+  flex-wrap: wrap;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 0px;
+}
+
+.nav-list > li {
+  list-style: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+li > a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  width: 196px;
+  height: 52px;
+  padding-top: 5px;
+}
+
+header {
+  background-color: #495e57;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.header-div {
+  width: 422px;
+  margin-left: 15px;
+}
+
+.header-img {
+  width: 326px;
+  height: 421px;
+  border-radius: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 77px;
+  color: #f4ce14;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #ffffff;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140.62%;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.btn {
+  background: #f4ce14;
+  border: 1px solid #f4ce14;
+  border-radius: 5px;
+  width: 210px;
+  height: 50px;
+}
+
+Main {
+  margin-top: 87px;
+}
+
+.specials-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 48px;
+  margin-left: 15px;
+}
+
+.specials-header {
+  font-family: "Markazi Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 77px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  width: auto;
+  flex-wrap: wrap;
+}
+
+.card-menu {
+  width: 265px;
+  height: 440px;
+  background-color: #edefee;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.card-header {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 90%;
+}
+
+.card-description {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card-order {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  position: absolute;
+  bottom: 0;
+}
+
+.card-header,
+.card-description,
+.card-order {
+  margin-left: 10px;
+}
+
+.delivery-img {
+  margin-left: 15px;
+}

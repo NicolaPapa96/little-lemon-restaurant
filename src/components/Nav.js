@@ -1,8 +1,8 @@
 export default function Nav() {
   return (
     <nav>
-      <img src="../Logo.jpg" alt="logo" />
-      <ul>
+      <img src="../images/Logo.jpg" alt="logo" className="logo" />
+      <ul className="nav-list">
         <li>
           <a href="">Home</a>
         </li>

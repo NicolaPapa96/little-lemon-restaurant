@@ -1,5 +1,6 @@
 import data from "../Data";
 import Card from "./Card";
+import { useState } from "react";
 
 export default function Main() {
   const card = data.map((item) => {

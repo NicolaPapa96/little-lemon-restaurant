@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
   return (
     <header>
@@ -8,7 +10,9 @@ export default function Header() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <button className="btn">Reserve a Table</button>
+        <Link to="/reservations">
+          <button className="btn">Reserve a Table</button>
+        </Link>
       </div>
       <img
         src="../images/restauranfood.jpg"

@@ -5,8 +5,9 @@ body {
 nav {
   display: flex;
   justify-content: space-around;
-  margin: 36px 10px;
   flex-wrap: wrap;
+  align-content: center;
+  margin: 36px 10px;
 }
 
 .nav-list {
@@ -167,4 +168,51 @@ Main {
 
 .delivery-img {
   margin-left: 15px;
+}
+
+/* Reservations page css */
+
+.reserve-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr;
+  max-width: 250px;
+  gap: 20px;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.reserve-submit {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.reserve-header {
+  text-align: center;
+}
+
+.table-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.form-control {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.errorMsg {
+  color: red;
+  font-size: 13px;
+}
+
+input,
+select,
+option > .form-control {
+  width: 100%;
+  text-align: center;
 }

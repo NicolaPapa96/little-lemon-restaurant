@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { fetchAPI, submitAPI } from "./API";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function BookingForm() {
   const {
@@ -11,7 +12,9 @@ export default function BookingForm() {
 
   const [times, setTimes] = useState([]);
 
-  const onSubmit = (data) => console.log(data);
+  const formSubmit = (data) => {
+    submitAPI(data);
+  };
 
   // handle date change
   const handleChange = (e) => {
@@ -25,10 +28,18 @@ export default function BookingForm() {
     return <option>{time}</option>;
   });
 
+  let navigate = useNavigate();
+
+  const confirmBook = () => {
+    if (formSubmit) {
+      navigate("/confirmed-booking");
+    }
+  };
+
   return (
     <>
       <h2 className="reserve-header">Reserve a table</h2>
-      <form className="reserve-form" onSubmit={handleSubmit(onSubmit)}>
+      <form className="reserve-form" onSubmit={handleSubmit(confirmBook)}>
         <label htmlFor="res-date">Choose date</label>
         <div className="form-control">
           <input
@@ -88,8 +99,8 @@ export default function BookingForm() {
         </div>
         <input
           type="submit"
-          value="Make Your reservation"
-          className="reserve-submit"
+          value="Make Your Reservation"
+          className="reserve-submit btn"
         />
       </form>
     </>

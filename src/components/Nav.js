@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 
-export default function Nav() {
+export default function Nav({ bgColor }) {
+  const changeColor = () => {
+    bgColor("#495E57");
+  };
+
   return (
     <nav>
       <img src="../images/Logo.jpg" alt="logo" className="logo" />
@@ -15,7 +19,9 @@ export default function Nav() {
           <Link to="/menu">Menu</Link>
         </li>
         <li>
-          <Link to="/reservations">Reservations</Link>
+          <Link to="/reservations" onClick={changeColor}>
+            Reservations
+          </Link>
         </li>
         <li>
           <Link to="/order-online">Order Online</Link>

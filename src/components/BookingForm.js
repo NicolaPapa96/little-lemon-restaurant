@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { fetchAPI, submitAPI } from "./API";
-import { Link, useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 
-export default function BookingForm() {
+export default function BookingForm({ navigate }) {
   const {
     register,
     handleSubmit,
@@ -12,8 +12,8 @@ export default function BookingForm() {
 
   const [times, setTimes] = useState([]);
 
-  const formSubmit = (data) => {
-    submitAPI(data);
+  const formSubmit = async (data) => {
+    await submitAPI(data);
   };
 
   // handle date change
@@ -28,7 +28,7 @@ export default function BookingForm() {
     return <option>{time}</option>;
   });
 
-  let navigate = useNavigate();
+  //let navigate = useNavigate();
 
   const confirmBook = () => {
     if (formSubmit) {
@@ -50,7 +50,9 @@ export default function BookingForm() {
             onChange={handleChange}
           />
           {errors.date && errors.date.type === "required" && (
-            <p className="errorMsg">This field is required</p>
+            <p className="errorMsg" role="alert">
+              This field is required
+            </p>
           )}
         </div>
         <label htmlFor="res-time">Choose time</label>
@@ -64,7 +66,9 @@ export default function BookingForm() {
             {availableTimes}
           </select>
           {errors.time && errors.time.type === "required" && (
-            <p className="errorMsg">This field is required</p>
+            <p className="errorMsg" role="alert">
+              This field is required
+            </p>
           )}
         </div>
         <label htmlFor="guests">Number of guests</label>
@@ -79,7 +83,9 @@ export default function BookingForm() {
             {...register("guests", { required: true })}
           />
           {errors.guests && errors.guests.type === "required" && (
-            <p className="errorMsg">This field is required</p>
+            <p className="errorMsg" role="alert">
+              This field is required
+            </p>
           )}
         </div>
         <label htmlFor="occasion">Occasion</label>
@@ -94,7 +100,9 @@ export default function BookingForm() {
             <option value="Anniversary">Anniversary</option>
           </select>
           {errors.occasion && errors.occasion.type === "required" && (
-            <p className="errorMsg">This field is required</p>
+            <p className="errorMsg" role="alert">
+              This field is required
+            </p>
           )}
         </div>
         <input

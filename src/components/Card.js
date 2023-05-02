@@ -1,7 +1,7 @@
 export default function Card(props) {
   return (
     <div className="card-menu">
-      <img src={props.item.image} alt={props.item.title} />
+      <img src={props.item.image} alt={props.item.title} className="card-img" />
       <h4 className="card-header">{props.item.title}</h4>
       <p className="card-description">{props.item.description}</p>
       <p className="card-order">

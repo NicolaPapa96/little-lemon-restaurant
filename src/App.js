@@ -2,9 +2,7 @@ import "./App.css";
 import Nav from "./components/Nav";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import About from "./pages/About";
-import Login from "./pages/Login";
 import Menu from "./pages/Menu";
-import OnlineOrder from "./pages/OnlineOrder";
 import Reservations from "./pages/Reservations";
 import Home from "./pages/Home";
 import ConfirmedBooking from "./pages/ConfirmedBooking";
@@ -25,8 +23,6 @@ function App() {
               path="/reservations"
               element={<Reservations navigate={navigate} />}
             />
-            <Route path="/order-online" element={<OnlineOrder />} />
-            <Route path="/login" element={<Login />} />
             <Route path="/confirmed-booking" element={<ConfirmedBooking />} />
           </Routes>
         </div>

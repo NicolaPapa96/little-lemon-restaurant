@@ -18,10 +18,10 @@ export default function Nav() {
           <Link to="/reservations">Reservations</Link>
         </li>
         <li>
-          <Link to="/order-online">Order Online</Link>
+          <Link>Order Online</Link>
         </li>
         <li>
-          <Link to="/login">Login</Link>
+          <Link>Login</Link>
         </li>
       </ul>
     </nav>

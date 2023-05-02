@@ -1,6 +1,6 @@
 import data from "../Data";
 import Card from "./Card";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Main() {
   const card = data.map((item) => {
@@ -10,7 +10,9 @@ export default function Main() {
     <main>
       <div className="specials-div">
         <h2 className="specials-header">This week specials!</h2>
-        <button className="btn menu-btn">Online Menu</button>
+        <Link to="/Menu">
+          <button className="btn menu-btn">Online Menu</button>
+        </Link>
       </div>
       <div className="cards">{card}</div>
     </main>

@@ -109,6 +109,12 @@ header {
   cursor: pointer;
   background-color: #495e57;
   color: #f4ce14;
+  box-shadow: 0px 0px 5px 2px #f4ce14;
+}
+
+.menu-btn:hover {
+  box-shadow: 0px 0px 10px 2px #495e57;
+  border: 1px solid #495e57;
 }
 
 Main {
@@ -150,9 +156,8 @@ Main {
   background-color: #edefee;
   position: relative;
   margin-bottom: 15px;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.384);
+  box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.384);
   border-radius: 25px;
-  border: 3px solid #495e57;
 }
 
 .card-header {

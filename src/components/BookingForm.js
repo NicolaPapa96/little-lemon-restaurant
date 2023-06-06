@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { fetchAPI, submitAPI } from "./API";
-//import { useNavigate } from "react-router-dom";
 
 export default function BookingForm({ navigate }) {
   const {
@@ -28,7 +27,6 @@ export default function BookingForm({ navigate }) {
     return <option>{time}</option>;
   });
 
-  //let navigate = useNavigate();
 
   const confirmBook = () => {
     if (formSubmit) {

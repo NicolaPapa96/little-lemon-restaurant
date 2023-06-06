@@ -11,7 +11,7 @@ export default function Header() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <Link to="/reservations">
-          <button className="btn">Reserve a Table</button>
+          <button className="btn header-btn">Reserve a Table</button>
         </Link>
       </div>
       <img
